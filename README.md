@@ -1,322 +1,306 @@
-# Cambodia Store - Flutter E-commerce App
+# 🛒 Cambodia Store - Flutter E-commerce App
 
-A full-featured e-commerce mobile application built with Flutter, converted from an HTML/JavaScript prototype. This app includes user authentication, product management, shopping cart functionality, and an admin dashboard.
+A complete, modern e-commerce mobile application built with Flutter. Features include product browsing, shopping cart with hover preview, admin dashboard, and user authentication.
 
-## Features
+![Flutter](https://img.shields.io/badge/Flutter-3.41.6-blue.svg)
+![Dart](https://img.shields.io/badge/Dart-3.0+-blue.svg)
+![Platform](https://img.shields.io/badge/platform-Android%20%7C%20iOS%20%7C%20Web-lightgrey.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-### User Features
-- ✅ **Splash Screen** - Beautiful loading screen with Cambodia flag
-- ✅ **Login/Register** - Admin authentication system
-- ✅ **Home Screen** - Featured products with image carousel
-- ✅ **Product Browsing** - Grid view of all products with search
-- ✅ **Product Details** - Detailed view in modal dialog
-- ✅ **Shopping Cart** - Add/remove items, adjust quantities
-- ✅ **Checkout** - Simple checkout process
-- ✅ **Contact Page** - Contact form and information
-- ✅ **Profile Screen** - User profile management
-- ✅ **Settings Screen** - App settings and preferences
-- ✅ **Navigation Drawer** - Easy navigation between screens
+## 📱 Screenshots
 
-### Admin Features
-- ✅ **Admin Dashboard** - Product management interface
-- ✅ **Add Products** - Create new products with form validation
-- ✅ **Edit Products** - Update existing product information
-- ✅ **Delete Products** - Remove products with confirmation
-- ✅ **Persistent Storage** - Products saved to local storage
+### Home Screen
+- Beautiful carousel slider with product images
+- Featured products in grid layout
+- Search functionality
+- Clean and modern UI
 
-### Technical Features
-- 🎨 Clean, modern Material Design UI
-- 📱 Responsive layout for mobile and web
-- 💾 SharedPreferences for data persistence
-- 🔄 Provider state management
-- 🎭 Image carousel with auto-play
-- 🔍 Real-time product search
-- 🛒 Shopping cart with badge counter
-- 🔐 Simple authentication system
+### Shopping Cart
+- Hover preview popup on cart icon
+- Real-time cart updates
+- Quantity management
+- Total price calculation
 
-## Project Structure
+### Admin Dashboard
+- Product CRUD operations
+- Image URL management
+- Real-time product updates
 
+## ✨ Features
+
+### 🏪 **E-commerce Core**
+- ✅ Product catalog with 12+ products
+- ✅ Product detail view with dialog
+- ✅ Shopping cart functionality
+- ✅ Cart hover preview (web)
+- ✅ Search products
+- ✅ Real-time cart updates
+
+### 👤 **User Features**
+- ✅ User authentication (login/logout)
+- ✅ Profile management
+- ✅ Settings screen
+- ✅ Contact page with map
+- ✅ Splash screen
+
+### 🔧 **Admin Features**
+- ✅ Admin dashboard
+- ✅ Add/Edit/Delete products
+- ✅ Product management
+- ✅ Image URL upload
+
+### 🎨 **UI/UX**
+- ✅ Modern, clean design
+- ✅ Bottom navigation bar (5 tabs)
+- ✅ Carousel slider
+- ✅ Responsive grid layout
+- ✅ Cart hover preview
+- ✅ Loading indicators
+- ✅ Error handling
+- ✅ Animations and transitions
+
+### 📱 **Navigation**
+- ✅ Home
+- ✅ Products
+- ✅ Cart (with badge)
+- ✅ Admin (admin only)
+- ✅ Profile
+
+## 🏗️ Architecture
+
+### **State Management**
+- Provider pattern
+- Reactive UI updates
+- Efficient rebuilds
+
+### **Project Structure**
 ```
 lib/
-├── main.dart                     # App entry point
+├── main.dart
 ├── models/
-│   ├── product.dart              # Product data model
-│   └── cart_item.dart            # Cart item model
+│   ├── product.dart
+│   └── cart_item.dart
 ├── providers/
-│   ├── auth_provider.dart        # Authentication state
-│   ├── product_provider.dart     # Product management
-│   └── cart_provider.dart        # Shopping cart state
+│   ├── auth_provider.dart
+│   ├── product_provider.dart
+│   └── cart_provider.dart
 ├── screens/
-│   ├── splash_screen.dart        # Initial loading screen
-│   ├── login_screen.dart         # Admin login
-│   ├── home_screen.dart          # Main home page
-│   ├── products_screen.dart      # All products view
-│   ├── cart_screen.dart          # Shopping cart
-│   ├── admin_screen.dart         # Admin dashboard
-│   ├── contact_screen.dart       # Contact form
-│   ├── profile_screen.dart       # User profile
-│   └── settings_screen.dart      # App settings
+│   ├── splash_screen.dart
+│   ├── login_screen.dart
+│   ├── home_screen.dart
+│   ├── products_screen.dart
+│   ├── cart_screen.dart
+│   ├── admin_screen.dart
+│   ├── profile_screen.dart
+│   ├── settings_screen.dart
+│   ├── contact_screen.dart
+│   └── main_navigation.dart
 └── widgets/
-    ├── product_card.dart         # Product card widget
-    ├── product_detail_dialog.dart # Product details dialog
-    └── app_drawer.dart           # Navigation drawer
+    ├── product_card.dart
+    ├── product_detail_dialog.dart
+    ├── cart_hover_preview.dart
+    ├── hoverable_product_card.dart
+    └── app_drawer.dart
 ```
 
-## Installation
+## 🚀 Getting Started
 
-### Prerequisites
-- Flutter SDK (3.11.4 or higher)
-- Dart SDK
-- Chrome, Android Studio, or iOS Simulator for testing
+### **Prerequisites**
+- Flutter SDK 3.41.6 or higher
+- Dart 3.0 or higher
+- Android Studio / VS Code
+- Git
 
-### Setup Steps
+### **Installation**
 
-1. **Clone or download the project**
-   ```bash
-   cd "d:\Lessons_and_Codes\MAF-I\my_project_mobile_app - Copy"
-   ```
+1. **Clone the repository**
+```bash
+git clone https://github.com/narithby225-ai/my_project_mobile_app.git
+cd my_project_mobile_app
+```
 
 2. **Install dependencies**
-   ```bash
-   flutter pub get
-   ```
+```bash
+flutter pub get
+```
 
-3. **Clean build (if needed)**
-   ```bash
-   flutter clean
-   flutter pub get
-   ```
+3. **Run the app**
+```bash
+# For web
+flutter run -d chrome
 
-4. **Run on Chrome**
-   ```bash
-   flutter run -d chrome
-   ```
+# For Android
+flutter run -d android
 
-5. **Run on Android Emulator**
-   ```bash
-   flutter run -d emulator-5554
-   ```
+# For iOS
+flutter run -d ios
+```
 
-6. **Run on Physical Device**
-   ```bash
-   flutter run
-   ```
-
-## Default Admin Credentials
-
-For testing the admin features, use these credentials:
-
-- **Username:** `admin_narith`
-- **Password:** `admin123`
-
-## Dependencies
+## 📦 Dependencies
 
 ```yaml
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.8
-  google_fonts: ^8.1.0
-  http: ^1.6.0
-  shared_preferences: ^2.2.2
-  provider: ^6.1.1
-  carousel_slider: ^5.0.0
+  
+  # State Management
+  provider: ^6.1.2
+  
+  # UI Components
+  carousel_slider: ^4.2.1
   badges: ^3.1.2
-  url_launcher: ^6.2.4
+  
+  # Storage
+  shared_preferences: ^2.3.4
+  
+  # Utilities
+  url_launcher: ^6.3.1
+  intl: ^0.19.0
 ```
 
-## Initial Products
+## 🔐 Admin Credentials
 
-The app comes pre-loaded with 12 sample products:
-1. Bicycle - $150.00
-2. Camera - $4,999.50
-3. Bag - $22.75
-4. Tie - $16.99
-5. iPhone - $1,350.00
-6. Headphones - $150.00
-7. Tennis Shoes - $69.99
-8. Laptop - $999.50
-9. GYM Equipment - $999.00
-10. Boots - $76.50
-11. Belt - $9.50
-12. Sample Book - $15.00
+To access the admin dashboard:
+- **Username**: `admin_narith`
+- **Password**: `admin123`
 
-## Screens Overview
+## 🎯 Key Implementations
 
-### 1. Splash Screen
-- Shows Cambodia flag logo
-- Auto-navigates to Login or Home based on auth state
+### **1. Cart Hover Preview**
+Hover over the cart icon to see a preview of cart contents without navigation.
 
-### 2. Login Screen
-- Clean login form with validation
-- Shows demo credentials for easy access
-- Gradient background design
+```dart
+// Features:
+- Shows up to 3 items
+- Real-time updates
+- Total price display
+- "View Cart" button
+- Compact design (280px width)
+```
 
-### 3. Home Screen
-- App bar with cart badge
-- Search functionality
-- Auto-playing image carousel
-- Featured products grid (first 6 products)
-- Quick links section
-- Navigation drawer access
+### **2. Product Management**
+Admin can manage products with full CRUD operations.
 
-### 4. Products Screen
-- Full product catalog
-- Search bar at top
-- Grid layout with 2 columns
-- Real-time search filtering
+```dart
+// Capabilities:
+- Add new products
+- Edit existing products
+- Delete products
+- Upload image URLs
+- Real-time updates
+```
 
-### 5. Cart Screen
-- List of cart items with images
-- Quantity adjustment buttons
-- Remove item functionality
-- Total price calculation
-- Checkout button
+### **3. State Management**
+Uses Provider for efficient state management.
 
-### 6. Admin Dashboard
-- Add/Edit product form
-- Product management grid
-- Edit and delete buttons for each product
-- Form validation
-- Success/error messages
+```dart
+// Providers:
+- AuthProvider: User authentication
+- ProductProvider: Product data
+- CartProvider: Shopping cart
+```
 
-### 7. Contact Screen
-- Contact information cards (phone, email, address)
-- Contact form with validation
-- Map location placeholder
-- Clickable phone and email links
+## 🎨 Design System
 
-### 8. Profile Screen
-- User avatar
-- User information display
-- Quick links to orders, wishlist, addresses
-- Login button for guests
+### **Colors**
+- Primary Blue: `#2563EB`
+- Background: `#F8FAFC`
+- Text Primary: `#1E293B`
+- Text Secondary: `#64748B`
 
-### 9. Settings Screen
-- Notification toggles
-- App preferences
-- About section
-- Account management options
+### **Typography**
+- Font Family: Inter
+- Title: 18-20px, Bold
+- Body: 13-14px, Regular
+- Caption: 10-12px, Regular
 
-## State Management
+### **Spacing**
+- Grid spacing: 16px
+- Card padding: 16px
+- Section margin: 24px
 
-The app uses **Provider** for state management with three main providers:
+## 📄 Documentation
 
-1. **AuthProvider** - Manages login/logout state
-2. **ProductProvider** - Handles product CRUD operations
-3. **CartProvider** - Manages shopping cart state
+Additional documentation files included:
+- `FEATURES.md` - Complete feature list
+- `QUICKSTART.md` - Quick start guide
+- `DESIGN_UPDATE.md` - Design system details
+- `CART_HOVER_FEATURE.md` - Cart hover implementation
+- `CART_IMPROVEMENTS_KH.md` - Cart improvements (Khmer)
+- `NAVIGATION_BAR_GUIDE.md` - Navigation setup
 
-## Data Persistence
+## 🔨 Build & Deploy
 
-- **SharedPreferences** stores:
-  - User authentication state
-  - Product list
-  - Admin status
+### **Build for Web**
+```bash
+flutter build web --release
+```
 
-Data persists across app restarts.
+### **Build for Android**
+```bash
+flutter build apk --release
+```
 
-## Key Features Explained
+### **Build for iOS**
+```bash
+flutter build ios --release
+```
 
-### Shopping Cart
-- Add products from any screen
-- Visual feedback with snackbar
-- Badge shows total item count
-- Quantity controls in cart view
-- Real-time total calculation
+## 🐛 Troubleshooting
 
-### Admin Panel
-- Only accessible to authenticated admins
-- Full CRUD operations on products
-- Form validation
-- Confirmation dialogs for deletions
-- Auto-generated product IDs
+### **Common Issues**
 
-### Search Functionality
-- Real-time filtering as you type
-- Searches product name and description
-- Auto-navigates to products page
-- Clear button to reset search
+1. **Dependency conflicts**
+```bash
+flutter pub upgrade
+flutter pub get
+```
 
-### Image Carousel
-- Auto-plays promotional images
-- 5-second interval
-- Smooth transitions
-- Error handling for failed images
-
-## Troubleshooting
-
-### Carousel Slider Error
-If you encounter a `CarouselController` conflict error:
+2. **Build cache issues**
 ```bash
 flutter clean
 flutter pub get
 ```
 
-### Missing Directory Error
-Ensure these directories exist:
-- `assets/data/`
-- `assets/images/`
-
-### Build Errors
-Try these steps:
+3. **Platform-specific issues**
 ```bash
-flutter clean
-flutter pub cache repair
-flutter pub get
-flutter run
+cd android && ./gradlew clean
+cd ios && pod install
 ```
 
-## Future Enhancements
+## 🤝 Contributing
 
-Potential features to add:
-- [ ] User registration system
-- [ ] Product categories and filtering
-- [ ] Order history
-- [ ] Payment integration
-- [ ] Product reviews and ratings
-- [ ] Wishlist functionality
-- [ ] Push notifications
-- [ ] Dark mode theme
-- [ ] Multi-language support
-- [ ] Product image upload
-- [ ] Advanced search filters
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Testing
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-Run on different platforms:
+## 📝 License
 
-```bash
-# Web
-flutter run -d chrome
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-# Android
-flutter run -d android
+## 👨‍💻 Author
 
-# iOS (Mac only)
-flutter run -d ios
+**Narith**
+- GitHub: [@narithby225-ai](https://github.com/narithby225-ai)
+- Project: [my_project_mobile_app](https://github.com/narithby225-ai/my_project_mobile_app)
 
-# Windows
-flutter run -d windows
-```
+## 🙏 Acknowledgments
 
-## Contact Information
+- Flutter team for the amazing framework
+- Provider package for state management
+- Carousel Slider for the image slider
+- All open-source contributors
 
-- **Email:** narithby225@gmail.com
-- **Phone:** +855 968421774
-- **Location:** Phnom Penh, Cambodia
+## 📞 Contact
 
-## License
-
-This project is created for educational purposes.
-
-## Credits
-
-- Original HTML design converted to Flutter
-- Cambodia flag image from Wikimedia Commons
-- Product images from various online sources
-- Built with Flutter and Material Design
+For questions or support, please open an issue on GitHub.
 
 ---
 
-**Version:** 1.0.0  
-**Last Updated:** June 2026
+**Built with ❤️ using Flutter**
+
+🌟 If you like this project, please give it a star!

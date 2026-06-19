@@ -1,0 +1,46 @@
+name: my_pgb_project_mobile_app
+description: "PG_B Store - E-commerce Flutter App"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  google_fonts: ^8.1.0
+  http: ^1.6.0
+  shared_preferences: ^2.2.2
+  provider: ^6.1.1
+  carousel_slider: ^5.0.0
+  badges: ^3.1.2
+  url_launcher: ^6.2.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/data/
+    - assets/data/user_data.json
+    - assets/images/
+
+  fonts:
+    - family: Battambang
+      fonts:
+        - asset: fonts/fonts/Battambang-Regular.ttf
+        - asset: fonts/fonts/Battambang-Bold.ttf
+          weight: 700
+
+    - family: Siemreap
+      fonts:
+        - asset: fonts/fonts/Siemreap-Regular.ttf
